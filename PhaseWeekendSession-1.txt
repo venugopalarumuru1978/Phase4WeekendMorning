@@ -1,0 +1,206 @@
+Phase 4 Content :- 
+------------------
+1. BootStrap  using HTML, CSS
+2. JavaScript
+3. Angular
+--------------------
+Today's Agenda :-
+--------------------
+Introduction Concepts of HTML, CSS
+BootStrap
+--------------------
+What is a HTML?
+
+It is a Hyper Text Markup Lang which meant for creating and design the web pages. 
+
+It is called as Markup Language. 
+A Language is said to be Markup Lang where it will not follow any programming techniques. 
+
+For Any Programming Lang:  
+		"Variables, Keywords, Input/Output Stmts, Control Stmts, Arrays, Strings, Functions". 
+
+Any Markup Language having collection of commands which are called as "Tags". 
+
+The tags are classified into two types
+
+1.  Container Tags
+		A tag which having a begining and ending elements.
+		<tagname [properties] ..... >
+			Action
+		</tagname>
+2.  Non - Container Tags
+		A tag which is having only begining element. 
+			<tagname [propeties] ..... />
+
+HTML, CSS and JavaScript not needed any software to execute, just it need only browser. But  need a software to code the program. Here we can use any text editor(Notepad, EditPlus, SublimeText, ...).
+or  For latest trending techologies, VSCode Software can be used. 
+
+<html>
+	<head>
+		this section  includes  different aspects like  "Title", "CSS", "JS", "MetaInfo"
+		<title>title of the page</title>
+		...........
+	</head>
+	<body>
+		Actual Program includes different type of tags. 
+	</body>
+</html>
+
+Note:- Every html program having an extension .html
+
+heading tags :- 
+h1, h2, h3, h4, h5, h6
+<p>Paragraph</p>
+<b>BOld</b>
+<i>Italic</i>
+<u>Underline</u>
+
+<br />  Line Break
+<hr />  Horizantal Line
+
+<img src="filename"  height="%age/Pixels"  width="%age/pixels"  alt="some text" />  => to view image
+<a href="page name" >Link text</a>  =  Anchor Tag  which meant for link b/w pages.
+
+To orgnise information  as per the requirement, there are two tags
+	1. Table Tag
+	2. Div Tag
+
+<table width="%age"  border="1/0">
+	<tr>  // table row
+		<th>Col-1</th>  // table head
+		<th>Col-2</th>
+		............
+		<th>Col-n</th>
+	</tr>
+
+	<tr>
+		<td>Value-1</td>  // table data
+		<td>Value-2</td>
+		............
+		<td>Value-n</td>
+	</tr>
+
+	.........................
+	.........................
+</table>
+---------------------------
+List Tags:- These tags are used to present textual info in point by point. 
+
+these are having 3 types
+
+Ordered List :- here it allows present text in points as 1/I/i/A/a
+
+<ol type="1/I/i/A/a">
+	<li>Point 1</li>
+	<li>Point 1</li>
+	...........
+</ol>
+
+Unordered List :- here it allows present text in points as symbols(circle/dot/square)
+
+<ul type="dot/square/circle">
+	<li>Point 1</li>
+	<li>Point 1</li>
+	...........
+</ul>
+
+Defintion List  :-  here it allows have heading and it's related defintion
+
+<dl>
+	<dt>Heading</dt>
+	<dd>Defintion</dd>
+	..............
+	..............
+</dl>
+---------------------------
+HTML Forms :- 
+-------------
+These are the collection of tags which allows to create and provide input to the web page. 
+
+The forms are like, text box, buttons, radiobuttons, checkboxes, dropdownlist, .......
+
+For most of the tools are created with <input> tag as follows
+
+textbox :-  this tool allows to input single line of text. 
+	<input  type="text"  name="name of the tool" ...... />
+
+PasswordBox :-  this tool allows to input single line of text with invisible chars. 
+	<input  type="password"  name="name of the tool" ...... />
+
+Buttons :- There are 3 types of buttons (button, submit, reset)
+
+button :-  it allows to execute only script. 
+submit :-  it allows to submit page to the server. 
+reset :-  it allows to refresh the webpage.
+
+<input type="button/submit/reset"  value="Visible text on button"  ..... />
+
+RadioButton :-  these buttons allows to select any one option from group of options. 
+
+<input type="radio"  name="name of tool"  value="val..." />Visiable Text
+
+CheckBox :-  It allows to select multiple options from group of options. 
+
+<input type="checkbox"  name="name of tool"  value="val..."  />Visiable Text
+
+textarea :-  this tag is used for allowing multiple lines of text. 
+
+<textarea  name="name of tool"  cols="no of chars"  rows="no of lines">
+	.....
+</textarea>
+
+dropdownlist :- it holds set of strings and  allows to select any one option. 
+
+<select name="name of tool">
+	<option value="val">text</option>
+	..............
+</select>
+-----------------------------------
+CSS :-  Cascading Style Sheets
+
+It is meant for appling styles for the web page to provide look and feel. 
+
+
+CSS can be used into 3 ways
+
+1.  Inline CSS  :-   these are used for every tag with "Style" Prop.
+			<tagname style="propname:value;propname:value;...." />
+2.  Page Level CSS :- these css are defined in <head> tag of the web page as follows
+			
+		<head>
+			<style>
+				
+			</style>
+		</head>
+
+	For Every tag it allows to write css as follows
+		tagname {
+			propname:value;
+			......
+		}
+
+	CSS allows to write user defined css classes for styles, these are defined in two ways
+			by using .(dot)
+
+				.cssclassname{
+					propname:value;
+					.....
+				}
+
+			to implement these classes use "class" prop for every tag
+				<tagname   class="cssclassname" .... />
+
+			by using #(Hash)
+				#cssclassname{
+					propname:value;
+					...........
+				}
+			to implement these classes use "id" prop for every tag
+				<tagname  id="cssclassname" .... />
+3.  Site Level CSS :- 
+	these css are used in multiple web pages
+
+		a.  Create a file with an extension .css
+		b.  define css in that file
+		c.  Link that css file to every web page in head tag by following tag
+			<link  href="css filename"  rel="stylesheet" />
