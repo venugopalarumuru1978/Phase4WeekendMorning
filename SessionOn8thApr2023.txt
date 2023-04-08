@@ -1,0 +1,98 @@
+Today's Agenda:-
+---------------
+JavaScript
+TypeScript
+----------------------
+What is a JavaScript:-
+
+Script is meant for  Programming with web page.
+
+there are couple of script lang
+	VBScript
+	JavaScript
+	ECMAScript  (Modified versions of ECMA Script is ES5/ES6)
+	-----------
+	Front End Programming Lang:-  these languages uses  javascript framework
+		Angular, React JS, NodeJs, Vue JS, Express JS
+		
+		Angular works with TypeScript
+		React Js works with ES5/ES6
+From all the script languages, JavaScript is a Browser Independent Script Lang. 
+
+JavaScript is loosely type script lang which meant for following things
+		1.  Creating Dynamic Web Pages
+		2.  Validating Web Page Inputs
+JavaScript is an Object based script lang. 
+
+1.  Since it is a Loosely typed Script lang, it won't provide any data types to declare variables. 
+		Variable = Value;
+			or
+		var/let Variable = value;
+	here Based value stored in variable, data type will be assigned. 
+	
+		var x = 100; // integer
+		var y = 12.45; // float
+		var str = "JavaScript" // string
+		
+	Note :-  as per strings, it can enclose either within " " / with in ' '
+
+2.  Any Script will be defined in HTML page only with following tag. 
+	<script  type="text/javascript">
+		script code
+	</script>
+	the above script tag can be placed either in <head>  /  in at the bottom of <body> tag.
+
+3.  To print something on the browser, use following statement
+	document.write/writeln("stmt"/variable);
+		here "document" is an pre-defined object which represents currently working web page.
+
+4.   To print something on the brower console, use following statement
+		console.log("stmt"/variable);
+			here "console" is an object which represents command prompt of the browser.
+5. As per script, every task will be finished by creating a user defined function, so that we have to know how to create user defined function. 
+
+	function  <fun_name>([arg])
+	{
+		body of the script;
+	}
+
+Once udf defined, it has to be called as follows:-
+	fun_name([arg values]);
+
+6.  Any GUI Programming having Event Driven Programming to handle actions for tools like button, 	textbox, radiobutton, ......
+Event :-  It is an action oriented method executed based on the other actions.
+		Click			-  for button  "onclick"  property
+		Double Click		-   for button "ondoubleclick" property
+		Change			-  for radiobutton, dropdownlist "onchange" property
+		KeyPress
+		KeyDown
+		DragAndDrop
+		Load			-  for page load(<body>) this event is used. event name is 						"onload".
+		Submit			-  for submit button there is an event "onsubmit". it has to 						be used in <form> tag.
+7. JavaScript allows to identify any element/tag with "id" property by using following method.
+		document.getElementById("id propname")
+this method having two properties  to assgin values
+	innerText :-  it takes any value in the form of text format.
+	innerHTML :-  it takes any value in the form of html format.
+8. <form> tag:-  This is used to hold set of input tags within it. 
+		<form  name="name of form"  method="POST/GET"  action="PageName">
+
+		</form>
+	Note:-  To get/set value for any tool like textbox, radionbutton, ...
+				"formname.toolname.value"
+9.  To convert  values from string to numeric types
+		parseInt(str) :-  convert value from string to integer
+		parseFloat(str) :-  convert value from string to decimal
+
+10.  To declare an array in javascript
+	var <variable> = [val1, val2, ....];
+---------------------------
+As Per OOPS :- 
+Object, Class, Data Encapsulation, Data Abstraction, Inheritance, Polymarphisum
+
+The programming languages are classified into two types
+
+1. Object Oriented  :- where the language allows to implement all concepts of OOPS.
+				Ex:-  C++, Java, C#.Net, .... 
+2. Object Based	    :-  Where the language allows to implement partial concepts of oops. 
+				Ex:-  VB6.0, JavaScript, ....
