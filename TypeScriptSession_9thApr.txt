@@ -1,0 +1,209 @@
+Today's Agenda:- 
+----------------
+1. TypeScript
+2. Introduction to Angular
+--------------------------
+What is a TypeScript?
+
+It is a programming language which is developed by using javascript. 
+
+The purpose of the typescript,  Angular applications developed with the help of TypeScript. 
+
+
+Features :-
+
+1.   Data Types
+2.   OOPS Concepts
+3.   Misc Concepts
+	Arrow Functions
+	String Interpolation
+	Multiline String hanndlings
+	Modules(import and exports files)
+
+TypeScript is a combination of JavaScript and additional features which above specified. 
+
+TypeScript programs are not supports directly in html programming. So that here we have to translate typescript program into javascript, then we can use it in web page. 
+
+TypeScript    ==>   Compiler  => JavaScript  ==> Run Program ==> Output. 
+
+Data Types :- 
+-------------
+1. number :-  it is meant for both integers  and decimal values. 
+2. string :-  it is meant for string values
+3. boolean :-  it is meant for boolean values(true/false)
+4. any :-   it is meant for any type value.
+
+		how to declare a variable 
+			var  <variablename> : <data type> = <value>;
+
+What is an NPM?
+	The Full form is : "Node Package Manager" Installer.
+	It is a world largest software library for front end web programming languages.
+	It exist nearly 8 Lakhs packages within it. 
+	These all packages uses in different front end languages. 
+		TypeScript
+		Angular
+		React JS
+		Node JS
+		Express JS
+		Vue JS
+	these all languages are needed "NPM", so that first we have to install "NPM" in our systems. 
+	NPM is a Open Source, i.e. we can use freely.
+
+	NPM will be installed with "Node JS" Software. by visiting http://nodejs.org, we can download 	and install it.
+
+	Command Line Client(CLI) :-  with the help of CLI we can download and install softwares 	related to scripts(typescript/angular/react/...) as well as to run and execute these 		applications CLI provides some commands. 
+	CLI comes with NPM.
+
+How to download and install TypeScript:- 
+
+	1. Goto the command prompt
+	2. use following command 
+		npm  install typescript -g
+
+Steps to write TypeScript Program:- 
+-----------------------------------
+1.  Open Any Editor (VSCode)
+2.  Code the program then save with .ts extension
+3.  goto command prompt then compile the program 
+		tsc filename.ts
+4.  Once it is compiled successfully, it generates js file, now run the program as follows
+		node filename.js
+----------------------------------
+OOPS Concepts:- 
+
+
+Class Creation:- 
+
+
+class <classname>
+{
+	variables declarations
+
+	methodname([arg]) :  <return type>
+	{
+		body of the method
+	}
+	.............
+}
+
+Note :-  to access any variable inside the class, "this" keyword has to be used. 
+		this.variable
+
+Object Creation :- 
+		var <object> = new ClassName([arg]);
+		once object is created, we can access class member with object
+			object.method()/variable
+Here we got access specifiers also :-  private, public, protected
+by default public is the access specifier for the class members. 
+
+As per the typescript, constructor will be created with "constructor" keyword.
+
+class <classname>
+{
+	constructor([args])
+	{
+		......
+	}
+}
+
+Note :- 
+TypeScript  variables/objects declared outside of the typescript classes can access golablly. i.e. these objects / variables can use from one program to another program directly. 
+---------------------------
+Inheritance :-  this concept as same as Java. 
+
+to inherit a parent class to child class "extends" keyword is used. 
+
+to inherit an interface to the class "implements" keyword is used. 
+-----------------------------
+Polymarphisum can not be implemented in TypeScript. 
+--------------------------------------
+Module Creation :- 
+------------------
+A module is a typescript class file(s) where it allows to export from  one program to another program
+
+Here to export a class into another class, while defining a class use "export" keyword. 
+
+export class <classname>
+{
+.....
+}
+
+whereever need to used exported class, there we have to import that class as follows
+
+import {Classname } from './filename';
+---------------------------------------------
+Enumerations :- 
+It is a collection of constants grouping under one unit. 
+It is also called as "User Defined Data type" for constants. 
+
+enum  <enum_name>
+{
+	const1, const2, .....
+}
+
+Once it is created, for every constant it will allocate an index number starts from 0, ....
+to access value from enumeratsions, we can use these indexes.
+----------------------------------------------
+What is an Angular? 
+
+It is an Client_Side framework used to create web applications. 
+It allows to SPA(Single Page Application) based web applications. 
+Angular works with the help of TypeScript. 
+It is an  cross-platform framework. i.e. it works on any Operating System. 
+It is spearate script logic and page logic with seprate files
+	i.e.  Typescript Maintain one file and UI part maintain one file but both are integrated. 
+
+How to install Angular :- 
+------------------------
+Install NOde JS
+Install TypeScript
+Install Angular using AngularCLI at command prompt
+		npm install @angular/cli -g  -- for latest version
+
+		npm install @angular/cli@10.2.0 -g  - for specific version
+Use anyone editor to the code the angular application(VSCode).
+------------------------------
+How to create an angular application:- 
+
+	1. goto command prompt, then use following command
+			ng  new <application_name>
+How to run the application:-
+		use following commands at command prompt
+			ng serve
+
+to stop application : Ctrl+C
+--------------------
+What is a Component?
+	It is a main piller of the angularapplication, which has set of files for different purposes
+		one html file :-  for UI
+		one css file :-  for Design
+		one TS file  :-  for scripting
+		one spec.ts file :-  for testing
+
+whenever we create a new application, by default one componenet will be created with the name "APP".
+it is the root component, because by using this component only other components are executed. 
+
+To create a componenet :
+		ng generate  component  <component_name>;
+				or
+		ng g component  <component_name>;
+--------------------------
+Data Bindings :- 
+It is a the process of relation b/w template(html file) and script(ts file).
+
+these data bindings used in 4 ways:- 
+
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two - Way Binding
+
+1.  Interpolation :- it is the process of presenting script varaible value into template
+				in html file:  {{variable name}}
+3. Event Binding :-  Appling event for html form tags(button, radiobutton, ....)
+		<tag     (eventname) = "methodname()" .... />
+--------------------
+pipes
+routing
+form creations
