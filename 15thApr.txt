@@ -1,0 +1,136 @@
+Today's Agenda:-
+----------------
+	1. Data Bindings
+	2. Directives
+	3. Pipes
+	4. Routing
+-----------------
+How to create an angular application:- 
+
+	1. goto command prompt, then use following command
+			ng  new <application_name>
+How to run the application:-
+		use following commands at command prompt
+			ng serve
+
+to stop application : Ctrl+C
+--------------------
+What is a Component?
+	It is a main piller of the angularapplication, which has set of files for different purposes
+		one html file :-  for UI
+		one css file :-  for Design
+		one TS file  :-  for scripting
+		one spec.ts file :-  for testing
+
+whenever we create a new application, by default one componenet will be created with the name "APP".
+it is the root component, because by using this component only other components are executed. 
+
+To create a componenet :
+		ng generate  component  <component_name>;
+				or
+		ng g component  <component_name>;
+--------------------------
+Data Bindings :- 
+It is a the process of relation b/w template(html file) and script(ts file).
+
+these data bindings used in 4 ways:- 
+
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two - Way Binding
+
+1.  Interpolation :- it is the process of presenting script varaible value into template
+				in html file:  {{variable name}}
+2. Property Binding :- it is the process of assigning any value to a specific tag/handling tag attributes with relavent values. 
+		<tag  [attribute]="value"  ...... />
+3. Event Binding :-  Appling event for html form tags(button, radiobutton, ....)
+		<tag     (eventname) = "methodname()" .... />
+4. Two - Way Binding :-  It is the process of binding any value(s) to the any tag,
+		here we have a pre-defined Directive called as "ngModel". 
+
+		<tag [(ngModel)]="variable" .... name="variable" />
+It is said to be two way binding because, if chagne value in front end it automatically changes values in backend variable(script) and vice versa.
+To work with two way binding we have import a module called as "FormsModule" in app.modules.ts file
+		import { FormsModule } from '@angular/forms';
+
+then add "FormsModule"  in Import Sections
+imports: [
+   .........
+    FormsModule
+  ],
+------------------------------------------------------------
+Directives :-  
+these are the special keywords of angular which can be used only in template(html page) to perform
+different actions. 
+
+All the directies starts with "ng"....  
+		ngDirectivename
+
+ngModel  :- it is used for two way binding
+ngClass  :- it is used to call a class in script. 
+ngIf     :- it is used to chcek condition in html page. 
+		<tag  *ngIf="condition" />
+ngIf - else  :-
+
+		<tag *ngIf="condition; then template1;else template2>
+		</tag>
+
+	here template1 and template2 are the containers where some output should be shown. it has to be created as follows 
+
+		<ng-template  #templatename>
+			html code
+		</ng-template>
+
+ngFor  :-  it is used to repeat process.  here if an array exist, call the array values in html by using loop.
+
+			<tag  *ngFor="let variable of arrayname"></tag>
+ngSwitch :-  it is also used to check conditions.
+
+	<tag [ngSwitch]="property">
+		<tag  *ngSwitchCase=" 'value' "></tag>
+		<tag  *ngSwitchCase=" 'value' "></tag>
+		<tag  *ngSwitchDefault></tag>
+	</tag>
+----------------------------------
+Angular allows to create a separate class as follows
+	ng g class <classname>;
+--------------------------------
+As per Angular, dynamically we can add any value to the existing array by following function
+		arrayname.push(value/variable/object)
+splice(index, no of rows) :- it is used to delete values from an array based index position. 
+--------------------------------------------------------------
+Pipes :-  these are the again some of keywords used in template for transforming data presentation.
+		<property | pipe ...>
+
+uppercase
+lowercase
+currency
+date
+json
+number
+----------------------------------
+Routing :- 
+it is the process of navigations b/w one component to another component. 
+to work with this routing concept, we have use following classes
+		Routes
+		RouterModule
+
+follow the below given steps
+
+1.  Goto app-routing.module.ts file, then define routings for every component as follows
+
+const routes: Routes = [
+	{path:"linktext", component:ComponentName, ....},
+	{path:"linktext", component:ComponentName, ....},
+	{path:"linktext", component:ComponentName, ....},
+	.....................
+];
+
+2. Goto app.component.html then specify one container to view component web page. 
+	<router-outlet></router-outlet>
+
+3. Suppose if we want hyperlink navigations, create the links in app.component.html by following tag
+	<a routerLink="path text" >Link Text</a>
+--------------------
+ng add  @ng-bootstrap/ng-bootstrap  :-  it will install bootstrap to the working application.
