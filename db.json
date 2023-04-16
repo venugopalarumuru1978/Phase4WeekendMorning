@@ -1,0 +1,39 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "empno": 1001,
+      "empname": "Jeevan",
+      "job": "Manager",
+      "sal": 12000
+    },
+    {
+      "id": 2,
+      "empno": 1002,
+      "empname": "karan",
+      "job": "Developer",
+      "sal": 11000
+    },
+    {
+      "id": 3,
+      "empno": 1003,
+      "empname": "Mohan",
+      "job": "Tester",
+      "sal": 10000
+    }
+  ],
+  "Student": [
+    {
+      "rollno": 101,
+      "sname": "Pavan",
+      "course": "Java",
+      "fees": 12000
+    },
+    {
+      "rollno": 102,
+      "sname": "Kamal",
+      "course": "Java",
+      "fees": 12000
+    }
+  ]
+}
