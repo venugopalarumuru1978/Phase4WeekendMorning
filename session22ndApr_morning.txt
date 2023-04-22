@@ -1,0 +1,46 @@
+Today's Agenda:-
+-----------------
+RxJS Module 
+HttpClient
+-----------------
+RxJS Module
+---------------------
+RxJS stands for *R*eactive E*x*tensions for *J*ava*S*cript, 
+
+it’s a library that gives us an implementation of Observables for JavaScript.
+RxJS, is a reactive library used to implement reactive programming to deal with async implementation, callbacks, and event-based programs.
+
+Observable :- It is a data source(events, http request, custom data source..) which sends in the form of data packets to the observer.
+
+Observer :-  It is an object that subscribes to the observable and listens to the data packets that sends by observable.
+
+these two classes comes under RxJS Module.  
+--------------------
+What is a Subscription?  
+Normally Subscription means an arrangement to receive something.   
+
+Similarly, in Angular applications Observables will be connected to observers and whenever they observe a new value or change in data, they will execute code with the help of Subscription and all the subscribed components will receive the updated outcome. 
+
+There is a method to this action subscribe(). 
+
+--------------------------------------------------
+HttpClient :-  This class is used to send request and get responses with the help of any API's.
+
+getmapping  = get()
+postmapping = post()
+putmapping = put()
+deletemapping = delete()
+----------------------------------------------
+ng add  @ng-bootstrap/ng-bootstrap
+https://medium.com/@devmrin/create-a-rest-api-json-server-in-less-than-1-minute-acf286600f03
+
+
+
+Steps :- 
+1.  Configure json server with specific table and start that server. Keep that json file into application  folder.
+2. Open Angular application, then add the components which are requiered. 
+3. Design the component as per the required. 
+4. Create a service in angular app, then define all the api calls in that service
+5. Add "HttpClientModule" package in app.module.ts file.
+6. Call that service methods whereever it is needed. 
+
